@@ -1,71 +1,107 @@
 import {React, useState} from 'react';
-
-
+import Project from './Project'
+import pro1 from '../assets/images/todo.PNG'
+import dashbord from '../assets/images/dashbord.PNG'
+import Popop from './Popop'
 const Projects = () => {
-// states
 
-const [mouse,setMouse] = useState(true)
+// states and declaratiio
+
+const [popup,setPopup] = useState([])
+const [show, setShow] =  useState(false)
 
 
-//functions
-// const handleMouse = () => {
-//   setMouse(!mouse)
-// }
+
+const project1 = {
+  imageSrc: pro1,
+  titre: 'Multi-Post Stories <br> Gain+Glory',
+  technolgies: ['React', 'Bootstrap', 'typeScript', 'redux'],
+  id: 'firstProject',
+  popupDescription: {
+    imageSrc: pro1,
+      titre: 'Add task',
+      technolgies: ['React', 'Bootstrap', 'typeScript', 'redux'],
+      description: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+      demoLink: 'https://ciraganenicole.github.io/Portfolio/',
+      source: 'https://github.com/ciraganenicole/Portfolio',
+  },
+};
+
+const project2 = {
+  imageSrc: dashbord,
+  titre: 'Multi-Post Stories <br> Gain+Glory',
+  technolgies: ['css', 'javascript', 'html'],
+  id: 'secondProject',
+  popupDescription: {
+      imageSrc: dashbord,
+      titre: 'DashBord',
+      technolgies: ['css', 'javascript', 'html'],
+      description: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+      demoLink: 'https://ciraganenicole.github.io/Portfolio/',
+      source: 'https://github.com/ciraganenicole/Portfolio',
+  },
+};
+
+const project3 = {
+  imageSrc: pro1,
+  titre: 'Multi-Post Stories <br> Gain+Glory',
+  technolgies: ['React', 'Bootstrap', 'typeScript', 'redux'],
+  id:'thirdProject',
+  popupDescription: {
+    imageSrc: pro1,
+      titre: 'Add task',
+      technolgies: ['React', 'Bootstrap', 'typeScript', 'redux'],
+      description: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+      demoLink: 'https://ciraganenicole.github.io/Portfolio/',
+      source: 'https://github.com/ciraganenicole/Portfolio',
+  },
+};
+
+const projects = [project1,project2,project3]
+
+// functions
+const handleClick = (key) => {
+  setPopup(
+    projects.filter((modal)=>modal.id === key ? {...modal}:false)
+  )
+// console.log(popup.popupDescription
+  console.log(popup[0].popupDescription.titre)
+  setShow(true)
+}
+
+const handleShow = () => {
+  setShow(false)
+}
+
+// fondition
+
+if(show){
+  document.body.classList.add('overflow-hidden')
+}else{
+  document.body.classList.remove('overflow-hidden')
+}
 
   return (
-    <div className="p-6 h-screen">
+    <>
+    {show &&(
+      <Popop handleshow={handleShow} popup={popup}/>
+  )}
+  <div className="p-6 h-screen w-screen">
       <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
             <h1 class="text-center text-2xl p-4"> My done projects </h1>
   </span>
       <div className="flex justify-center gap-x-8">
-      
-      <div className="h-96 w-80 bg-cover bg-project-one bg-no-repeat bg-center rounded-md shadow-lg">
-      <div className="h-96 w-80 bg-blue-450 opacity-50 rounded-md hover:opacity-0"></div>
-      {mouse && (
-        <div className="flex flex-col w-80 h-96 p-4 rounded-md text-white justify-around absolute top-3px">
-        <h1 className="bg-primary text-2xl text-blue-450 text-center rounded-md z-50">DashbordAdmin</h1>
-        <p className="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa ipsam eum consectetur a, deleniti, dolorum consequuntur distinctio earum quibusdam, saepe vero soluta rerum cumque. Vero voluptatum enim magnam rerum?</p>
-        <p className="flex flex-row justify-around z-50">
-          <a href="http//" className="bg-primary p-0.5 w-20 text-center rounded-md">HTM</a>
-          <a href="http//" className="bg-primary p-0.5 w-20 text-center rounded-md">CSS</a>
-          <a href="http//" className="bg-primary p-0.5 w-20 text-center rounded-md">javascript</a>
-        </p>
-      </div>)}
-      </div>
-
-  
-      <div className="h-96 w-80 bg-cover bg-project-one bg-no-repeat bg-center rounded-md shadow-lg">
-      <div className="h-96 w-80 bg-blue-450 opacity-50 rounded-md hover:opacity-0"></div>
-      {mouse && (
-        <div className="flex flex-col w-80 h-96 p-4 rounded-md text-white justify-around absolute top-3px">
-        <h1 className="bg-primary text-2xl text-blue-450 text-center rounded-md z-50">DashbordAdmin</h1>
-        <p className="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa ipsam eum consectetur a, deleniti, dolorum consequuntur distinctio earum quibusdam, saepe vero soluta rerum cumque. Vero voluptatum enim magnam rerum?</p>
-        <p className="flex flex-row justify-around z-50">
-          <a href="http//" className="bg-primary p-0.5 w-20 text-center rounded-md">HTM</a>
-          <a href="http//" className="bg-primary p-0.5 w-20 text-center rounded-md">CSS</a>
-          <a href="http//" className="bg-primary p-0.5 w-20 text-center rounded-md">javascript</a>
-        </p>
-      </div>)}
-      </div>
-
-
-      <div className="h-96 w-80 bg-cover bg-project-one bg-no-repeat bg-center rounded-md shadow-lg">
-      <div className="h-96 w-80 bg-blue-450 opacity-50 rounded-md hover:opacity-0"></div>
-      {mouse && (
-        <div className="flex flex-col w-80 h-96 p-4 rounded-md text-white justify-around absolute top-3px">
-        <h1 className="bg-primary text-2xl text-blue-450 text-center rounded-md z-50">DashbordAdmin</h1>
-        <p className="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum culpa ipsam eum consectetur a, deleniti, dolorum consequuntur distinctio earum quibusdam, saepe vero soluta rerum cumque. Vero voluptatum enim magnam rerum?</p>
-        <p className="flex flex-row justify-around z-50">
-          <a href="http//" className="bg-primary p-0.5 w-20 text-center rounded-md">HTM</a>
-          <a href="http//" className="bg-primary p-0.5 w-20 text-center rounded-md">CSS</a>
-          <a href="http//" className="bg-primary p-0.5 w-20 text-center rounded-md">javascript</a>
-        </p>
-      </div>)}
-      </div>
-
-
+      {projects.map((work)=>(
+        <Project id={work.id}
+          image={work.imageSrc}
+          titre={work.titre}
+          tech={work.technolgies}
+          handleClick={handleClick}
+        />
+      ))}
     </div>
     </div>
+    </>
   )
 }
 

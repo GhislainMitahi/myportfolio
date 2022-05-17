@@ -10,6 +10,11 @@
 
 # production
 /build
+#emailkey
+emailkey.
+
+#form
+/src/components/Form.js
 
 # misc
 .DS_Store

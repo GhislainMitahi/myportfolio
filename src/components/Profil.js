@@ -12,7 +12,7 @@ const Profil = (props) => {
     
   </div>
   <div className="w-2/5 items-center">
-  <h1 className="text-primary text-2xl">Hello you all, I'm <span className="underline ">{props.data.firstName} {props.data.lastName}</span></h1>
+  <h1 className="text-red text-2xl ">Hello you all, I'm <span className="underline ">{props.data.firstName} {props.data.lastName}</span></h1>
     <p className="tracking-wider
     text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia illum nulla distinctio, voluptas cumque natus, quis obcaecati tempora voluptates corrupti veniam dolores corporis magnam et qui! Id natus blanditiis eligendi?</p>
   </div>
