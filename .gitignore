@@ -16,6 +16,9 @@ emailkey.
 #form
 /src/components/Form.js
 
+#dashbord
+/src/components/Dashbord.js
+
 # misc
 .DS_Store
 .env.local
