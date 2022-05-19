@@ -86,11 +86,9 @@ if(show){
     {show &&(
       <Popop handleshow={handleShow} popup={popup}/>
   )}
-  <div className="p-6 h-screen w-screen">
-      <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+  <div className="p-6 h-auto w-screen">
             <h1 class="text-center text-2xl p-4"> My done projects </h1>
-  </span>
-      <div className="flex justify-center gap-x-8">
+      <div className="md:flex sm:justify-center gap-x-8 sm:mb-4">
       {projects.map((work)=>(
         <Project id={work.id}
           image={work.imageSrc}

@@ -119,3 +119,12 @@ input[type="submit"] {
     font-size: 18px;
     border-radius: 2px;
 }
+
+
+/* @media only screen and (min-width: 700px) {
+    #profil {
+        display: flex;
+        flex-direction: column;
+        background-color: wihite;
+    }
+} */

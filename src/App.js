@@ -10,8 +10,6 @@ const dataName = {
   firstName: "Ghislain",
   lastName: "Mitahi",
 }
-
-
   return (
     <div>
         <Nav data={dataName}/>

@@ -6,7 +6,7 @@ import { BsEye } from "react-icons/bs";
 const Project = (props) => {
   return (
 
-<div className="h-96 w-80 rounded-md shadow-lg">
+<div className="md: h-96 w-80 rounded-md shadow-lg">
         <div className="h-2/4"><img src={props.image} alt="#" className="rounded-t-md h-full w-full"/></div>
         <div className="h-2/5 bg-blue-450 flex flex-col justify-around text-white p-2"> 
         <h1 className="text-center text-xl">
