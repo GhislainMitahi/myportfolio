@@ -19,14 +19,14 @@ const Contact = () => {
 
   return (
 <>
-<div className="flex flex-col pt-4">
+<div className=" contact flex flex-col pt-4" id="contact">
 <h1 className="text-center md:text-3xl  text-primary md:font-bold contact-titre">Contact</h1>
 <div className="flex items-center place-content-center">
     <div className="the_container md:flex items-center place-content-center gap-8 ">
     <div className="md:text-3xl md:font-bold md:w-2/5 text-primary mt-6 h-full md:text-start">
     I'm always interested in building new interesting projects, open to all kinds of discussions, and happy to meet people, feel free to reach out to me or hire me.
 </div>
-<form action="" ref={form} onSubmit={(e)=>handleSubmit(e)} className="w-2/4 mt-6">
+<form action="" ref={form} onSubmit={(e)=>handleSubmit(e)} className="md:w-2/4 mt-6 md:border">
         <div className="row100">
             <div className="col">
                 <div className="inputBox">

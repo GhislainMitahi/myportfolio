@@ -3,7 +3,7 @@ import Me from '../assets/images/me_in_code.jpeg'
 
 const About = (props) => {
   return (
-    <div className="flex-col bg-black text-white p-5 h-screen about">
+    <div className="flex-col bg-black text-white p-5 h-screen about" id="about">
       <h1 className="text-center text-5xl p-4 text-primary titre-about">About Me</h1>
       <div className="flex mt-8 justify-center items-center w-full content-about">
         <div className="text-about md:w-2/4 flex gap-6 justify-center items-center flex-col ">

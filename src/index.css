@@ -200,4 +200,36 @@ input[type="submit"] {
     .the_container .row100 .inputBox .clean {
         display: none;
     }
+    .mainP {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .project {
+        width: 280px;
+        margin-bottom: 10px
+    }
+    /* .project .c-titre-tech {
+
+    } */
+    .project .c-titre-tech h1 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .project .tech {
+        font-size: 12px;
+    }
+    .project .tech p {
+        width: 75px
+    }
+    .project .see p {
+        font-size: 20px;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

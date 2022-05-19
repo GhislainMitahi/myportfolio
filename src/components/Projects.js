@@ -90,9 +90,9 @@ if(show){
     {show &&(
       <Popop handleshow={handleShow} popup={popup}/>
   )}
-  <div className="p-6 md:h-auto md:w-auto border-black">
+<div className="mainP md:p-6 h-auto md:w-auto border-black" id="project">
             <h1 class="text-center md:text-2xl p-4"> My done projects </h1>
-      <div className=" md:flex justify-center gap-x-8 h-auto">
+      <div className=" md:flex md:justify-center md:gap-x-8 h-auto">
       {projects.map((work)=>(
         <Project id={work.id}
           image={work.imageSrc}

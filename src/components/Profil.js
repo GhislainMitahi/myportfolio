@@ -6,6 +6,7 @@ import { GoMarkGithub } from "react-icons/go";
 const Profil = (props) => {
   
   return (
+    <div  id="portofolio">
     <div className="flex items-center h-screen w-screen profil" id="main_page">
    <div class="md:ml-4 md:w-1/6 md:items-start md:flex-col icons">
 
@@ -24,13 +25,13 @@ const Profil = (props) => {
 </div>
 <div className="w-2/5 items-center text-lg intro">
 <h1 className="text-red text-2xl titre ">Hello, I'm <span className="underline ">{props.data.firstName} {props.data.lastName}</span></h1>
-  <p className="tracking-wider md:text-justify texts">I'm a full-stack web developer.
+  <p className="tracking-wider texts">I'm a full-stack web developer.
 I worked on real-world projects with different teams through pair programming.</p>
 </div>
  <div class="w-2/5 items-center photo">
   <img src={props.gif} alt="gif"/>
 </div>
-
+</div>
   </div>
   )
 }
