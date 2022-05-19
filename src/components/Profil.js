@@ -6,16 +6,8 @@ import { GoMarkGithub } from "react-icons/go";
 const Profil = (props) => {
   
   return (
-    <div className="sm:flex sm:items-center h-auto w-screen">
-    <div class="w-2/5 items-center">
-  <img src={props.gif} alt="gif"/>
-  
-</div>
-<div className="w-2/5 items-center sm:text-sm md:text-lg">
-<h1 className="text-red sm:text-xl md:text-2xl">Hello you all, I'm <span className="underline ">{props.data.firstName} {props.data.lastName}</span></h1>
-  <p className="tracking-wider md:text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia illum nulla distinctio, voluptas cumque natus, quis obcaecati tempora voluptates corrupti veniam dolores corporis magnam et qui! Id natus blanditiis eligendi?</p>
-</div>
-<div class="flex w-1/6 md:items-end flex-col">
+    <div className="flex items-center h-screen w-screen profil" id="main_page">
+   <div class="md:ml-4 md:w-1/6 md:items-start md:flex-col icons">
 
 <a href="https://www.linkedin.com/in/ghislain-mitahi/" className="p-2">
    <BsLinkedin/>
@@ -30,6 +22,15 @@ const Profil = (props) => {
     <GoMarkGithub/>
 </a>
 </div>
+<div className="w-2/5 items-center text-lg intro">
+<h1 className="text-red text-2xl titre ">Hello, I'm <span className="underline ">{props.data.firstName} {props.data.lastName}</span></h1>
+  <p className="tracking-wider md:text-justify texts">I'm a full-stack web developer.
+I worked on real-world projects with different teams through pair programming.</p>
+</div>
+ <div class="w-2/5 items-center photo">
+  <img src={props.gif} alt="gif"/>
+</div>
+
   </div>
   )
 }

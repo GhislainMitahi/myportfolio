@@ -20,11 +20,11 @@ const Contact = () => {
   return (
 <>
 <div className="flex flex-col pt-4">
-<h1 className="text-center text-3xl  text-primary font-bold">Contact</h1>
+<h1 className="text-center md:text-3xl  text-primary md:font-bold contact-titre">Contact</h1>
 <div className="flex items-center place-content-center">
-    <div className="the_container flex items-center place-content-center gap-8 ">
-    <div className="text-2xl font-semibold w-2/5 text-primary mt-6 h-full  text-start">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores molestias iste inventore dicta reprehenderit cumque natus quod recusandae facilis, dignissimos nulla aperiam aliquam quae unde placeat? Nostrum magni ad adipisci!
+    <div className="the_container md:flex items-center place-content-center gap-8 ">
+    <div className="md:text-3xl md:font-bold md:w-2/5 text-primary mt-6 h-full md:text-start">
+    I'm always interested in building new interesting projects, open to all kinds of discussions, and happy to meet people, feel free to reach out to me or hire me.
 </div>
 <form action="" ref={form} onSubmit={(e)=>handleSubmit(e)} className="w-2/4 mt-6">
         <div className="row100">
@@ -46,7 +46,7 @@ const Contact = () => {
         <div className="row100">
             <div className="col">
                 <div className="inputBox">
-                    <input type="mail" name="lastname" required="required" />
+                    <input type="mail" name="lastname" required="required"/>
                     <span className="email" >Email</span>
                     <span className="line"></span>
                 </div>
@@ -64,7 +64,7 @@ const Contact = () => {
                 <div className="inputBox textarea">
                     <textarea required="required" name="message"></textarea>
                     <span className="text">Type your message here ...</span>
-                    <span className="line"></span>
+                    <span className="line clean"></span>
                 </div>
             </div>
         </div>

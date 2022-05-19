@@ -8,6 +8,10 @@ const Projects = () => {
 // states and declaratiio
 
 const [popup,setPopup] = useState([])
+
+
+
+
 const [show, setShow] =  useState(false)
 
 
@@ -86,9 +90,9 @@ if(show){
     {show &&(
       <Popop handleshow={handleShow} popup={popup}/>
   )}
-  <div className="p-6 h-auto w-screen">
-            <h1 class="text-center text-2xl p-4"> My done projects </h1>
-      <div className="md:flex sm:justify-center gap-x-8 sm:mb-4">
+  <div className="p-6 md:h-auto md:w-auto border-black">
+            <h1 class="text-center md:text-2xl p-4"> My done projects </h1>
+      <div className=" md:flex justify-center gap-x-8 h-auto">
       {projects.map((work)=>(
         <Project id={work.id}
           image={work.imageSrc}
