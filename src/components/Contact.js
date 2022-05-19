@@ -19,7 +19,7 @@ const Contact = () => {
 
   return (
 <>
-<div className=" contact flex flex-col pt-4" id="contact">
+<div className="flex flex-col pt-4" id="contact">
 <h1 className="text-center md:text-3xl  text-primary md:font-bold contact-titre">Contact</h1>
 <div className="flex items-center place-content-center">
     <div className="the_container md:flex items-center place-content-center gap-8 ">
@@ -63,12 +63,11 @@ const Contact = () => {
             <div className="col">
                 <div className="inputBox textarea">
                     <textarea required="required" name="message"></textarea>
-                    <span className="text">Type your message here ...</span>
+                    <span className="text">Type your message here</span>
                     <span className="line clean"></span>
                 </div>
             </div>
         </div>
-
         <div className="row100">
             <div className="col">
                 <input type="submit" value="send" className="text-white"/>
