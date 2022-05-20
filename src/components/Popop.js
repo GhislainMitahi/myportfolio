@@ -4,29 +4,34 @@ import { VscLiveShare,VscGithubInverted,VscClose} from "react-icons/vsc";
 const Popop = ({popup, handleshow}) => {
 
   return (
-    <div className="h-screen w-screen fixed top-0 left-0 right-0 bottom-0">
-    <div className="bg-blue-450 opacity-50 h-screen w-screen fixed top-0 left-0 right-0 bottom-0" onClick={handleshow}></div>
-        <div className="bg-white text-center absolute top-0 left-0 w-6/12 h-auto transform flex flex-col items-center justify-center gap-2 mt-1 ml-p25 rounded p-2 mb-8">
-        <div className="w-full flex place-content-end mr-1 text-3xl text-myred">
+    <div className="h-screen w-screen fixed top-0 left-0 right-0 bottom-0 the-modal">
+    <div className="bg-blue-450 opacity-50 h-screen w-auto fixed top-0 left-0 right-0 bottom-0" onClick={handleshow}></div>
+        <div className="bg-white text-center absolute top-0 left-0 md:w-6/12 h-auto transform flex flex-col items-center justify-center md:gap-2 md:mt-1 md:ml-p25 rounded md:p-2 md:mb-16 pop"> 
+        <div className="w-full flex items-center justify-end mr-1 text-3xl text-myred">
             <span onClick={handleshow}><VscClose/></span>  
         </div>
-          <div className="w-full">
-            <img src={popup[0].popupDescription.imageSrc} alt="" className="w-full h-full rounded"/>
+          <div className="md:w-5/6 pop-image shadow shadow-blue-450">
+            <img src={popup[0].popupDescription.imageSrc} alt="" className="w-full h-full"/>
           </div>
-          <div className="flex w-full place-content-between">
-            <h1 className="ml-4 font-bold text-xl">{popup[0].popupDescription.titre}</h1>
-            <p className="flex gap-4 mr-4">
-              <a href={popup[0].popupDescription.demoLink} className="bg-primary w-28 flex gap-2 items-center place-content-center text-white rounded">See Live<VscLiveShare/></a>
-              <a href={popup[0].popupDescription.source} className="bg-primary w-28 flex gap-2 items-center place-content-center placeholder text-white rounded">See Source<VscGithubInverted/> </a>
+          <div className="md:flex md:w-full place-content-between title-and-go">
+            <h1 className="ml-4 font-bold text-xl pop-titre">{popup[0].popupDescription.titre}</h1>
+            <p className="md:flex md:gap-4 md:mr-4 pop-go-pro">
+              <a href={popup[0].popupDescription.demoLink} className="bg-primary md:w-28 flex gap-2 items-center place-content-center text-white rounded">Live<VscLiveShare/></a>
+              <a href={popup[0].popupDescription.source} className="bg-primary md:w-28 flex gap-2 items-center place-content-center text-white rounded">Source<VscGithubInverted/> </a>
             </p>
           </div>
-              <ul className="flex w-full place-content-start gap-2 ml-4">
-                <li className="bg-primary rounded p-1 text-white text-xs text-center"> {popup[0].popupDescription.technolgies[0]}</li>
-                <li className="bg-primary rounded p-1 text-white text-xs text-center"> {popup[0].popupDescription.technolgies[1]}</li>
-                <li className="bg-primary rounded p-1 text-white text-xs text-center"> {popup[0].popupDescription.technolgies[2]}</li>
-                <li className="bg-primary rounded p-1 text-white text-xs text-center"> {popup[0].popupDescription.technolgies[3]}</li>
+
+              <ul className="md:flex flex-wrap w-full place-content-start gap-2 ml-4 pop-tech">
+
+              {popup[0].popupDescription.technolgies.map((tech)=>(
+                <li className="bg-primary rounded md:p-1 text-white md:text-xs text-center"> {tech}</li>
+              ))}
+                {/* <li className="bg-primary rounded md:p-1 text-white md:text-xs text-center"> {popup[0].popupDescription.technolgies[0]}</li>
+                <li className="bg-primary rounded md:p-1 text-white md:text-xs text-center"> {popup[0].popupDescription.technolgies[1]}</li>
+                <li className="bg-primary rounded md:p-1 text-white md:text-xs text-center"> {popup[0].popupDescription.technolgies[2]}</li>
+                <li className="bg-primary rounded md:p-1 text-white md:text-xs text-center"> {popup[0].popupDescription.technolgies[3]}</li> */}
               </ul>
-          <div className="text-justify">
+          <div className="md:text-justify text-start text-justify m-2 pop-text">
             {popup[0].popupDescription.description}
           </div>
 </div> 
