@@ -10,37 +10,26 @@ const Popop = ({popup, handleshow}) => {
         <div className="w-full flex items-center justify-end mr-1 text-3xl text-myred">
             <span onClick={handleshow}><VscClose/></span>  
         </div>
-          <div className="md:w-5/6 pop-image shadow shadow-blue-450">
+          <div className="md:w-11/12 pop-image shadow shadow-blue-450">
             <img src={popup[0].popupDescription.imageSrc} alt="" className="w-full h-full"/>
           </div>
           <div className="md:flex md:w-full place-content-between title-and-go">
             <h1 className="ml-4 font-bold text-xl pop-titre">{popup[0].popupDescription.titre}</h1>
-            <p className="md:flex md:gap-4 md:mr-4 pop-go-pro">
+            <p className="md:flex md:gap-4 md:mr-4 p-0 pop-go-pro ml-4">
               <a href={popup[0].popupDescription.demoLink} className="bg-primary md:w-28 flex gap-2 items-center place-content-center text-white rounded">Live<VscLiveShare/></a>
               <a href={popup[0].popupDescription.source} className="bg-primary md:w-28 flex gap-2 items-center place-content-center text-white rounded">Source<VscGithubInverted/> </a>
             </p>
           </div>
-
-              <ul className="md:flex flex-wrap w-full place-content-start gap-2 ml-4 pop-tech">
-
+              <ul className="md:flex flex-wrap w-full place-content-start gap-2 ml-8 pop-tech">
               {popup[0].popupDescription.technolgies.map((tech)=>(
-                <li className="bg-primary rounded md:p-1 text-white md:text-xs text-center"> {tech}</li>
+                <li className="bg-primary rounded md:p-1 text-white md:text-xs text-center p-2 "> {tech}</li>
               ))}
-                {/* <li className="bg-primary rounded md:p-1 text-white md:text-xs text-center"> {popup[0].popupDescription.technolgies[0]}</li>
-                <li className="bg-primary rounded md:p-1 text-white md:text-xs text-center"> {popup[0].popupDescription.technolgies[1]}</li>
-                <li className="bg-primary rounded md:p-1 text-white md:text-xs text-center"> {popup[0].popupDescription.technolgies[2]}</li>
-                <li className="bg-primary rounded md:p-1 text-white md:text-xs text-center"> {popup[0].popupDescription.technolgies[3]}</li> */}
               </ul>
-          <div className="md:text-justify text-start text-justify m-2 pop-text">
+          <div className="md:text-justify text-start text-justify m-4 pop-text">
             {popup[0].popupDescription.description}
           </div>
 </div> 
 </div>
-
-        
- 
-
   )
 }
-
 export default Popop

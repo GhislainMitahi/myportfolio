@@ -13,10 +13,13 @@ const Project = (props) => {
         <h1 className="text-center text-xl">
         {props.titre}
         </h1>
-        <div className="tech flex tech justify-around">
-          <p className="bg-primary p-1 w-24 text-center rounded font-bold">{props.tech[0]}</p>
+        <div className="tech flex flex-wrap tech justify-around">
+        {props.tech.map((ftechno)=>(
+          <p className="bg-primary p-1 w-24 text-center rounded font-bold mb-2">{ftechno}</p>
+        ))}
+          {/* <p className="bg-primary p-1 w-24 text-center rounded font-bold">{props.tech[0]}</p>
           <p className="bg-primary p-1 w-24 text-center rounded font-bold">{props.tech[1]}/</p>
-          <p className="bg-primary p-1 w-24 text-center rounded font-bold">{props.tech[2]}/</p>
+          <p className="bg-primary p-1 w-24 text-center rounded font-bold">{props.tech[2]}/</p> */}
         </div>
         </div>
         <div className="see md:h-12 bg-blue-450 rounded-b-md flex items-center place-content-center text-white text-xl border-t border-gray-200 hover:bg-primary hover:text-white transition duration-200 ease-out hover:ease-in" onClick={()=>props.handleClick(props.id)}>

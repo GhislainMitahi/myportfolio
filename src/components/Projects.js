@@ -2,89 +2,71 @@ import {React, useState} from 'react';
 import Project from './Project'
 import pro1 from '../assets/images/todo.PNG'
 import dashbord from '../assets/images/dashbord.PNG'
+import trackar from '../assets/images/trackar.PNG'
 import Popop from './Popop'
 const Projects = () => {
 
-// states and declaratiio
 
 const [popup,setPopup] = useState([])
-
-
-
-
 const [show, setShow] =  useState(false)
-
-
 
 const project1 = {
   imageSrc: pro1,
-  titre: 'Multi-Post Stories <br> Gain+Glory',
+  titre: 'To do list',
   technolgies: ['React', 'Bootstrap', 'typeScript', 'redux'],
   id: 'firstProject',
   popupDescription: {
     imageSrc: pro1,
-      titre: 'Add task',
-      technolgies: ['React', 'Bootstrap', 'typeScript', 'redux'],
-      description: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-      demoLink: 'https://ciraganenicole.github.io/Portfolio/',
-      source: 'https://github.com/ciraganenicole/Portfolio',
+      titre: 'Add taskTo',
+      technolgies: ['React','Bootstrap', 'typeScript', 'redux'],
+      description: " This project was created with the aim to help people increase their productivity. The todo list app allows you to prioritize the tasks that are more important. It was built by implementing the four basic functions which are Create, Read, Update, and Delete(CRUD).",
+      demoLink: 'https://handletasks.netlify.app/',
+      source: 'https://github.com/GhislainMitahi/to_do_tasks_project',
   },
 };
-
 const project2 = {
   imageSrc: dashbord,
-  titre: 'Multi-Post Stories <br> Gain+Glory',
+  titre: 'Admin Dasboard',
   technolgies: ['css', 'javascript', 'html'],
   id: 'secondProject',
   popupDescription: {
       imageSrc: dashbord,
-      titre: 'DashBord',
-      technolgies: ['css', 'javascript', 'html'],
-      description: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-      demoLink: 'https://ciraganenicole.github.io/Portfolio/',
-      source: 'https://github.com/ciraganenicole/Portfolio',
+      titre: 'Admin Dasboard',
+      technolgies: ['css', 'javascript','html'],
+      description: "The admin dashboard project was created for three main purposes which are analytic(to identify historical trends, establish targets, predict outcomes, and/or discover insights), operational (to monitor, measure and manage processes in real-time), and strategic (to track key performance indicators (KPIs) and process towards established targets)",
+      demoLink: 'https://admindashboardghis.netlify.app/',
+      source: 'https://github.com/GhislainMitahi/AdminDashboard',
   },
 };
-
 const project3 = {
-  imageSrc: pro1,
-  titre: 'Multi-Post Stories <br> Gain+Glory',
-  technolgies: ['React', 'Bootstrap', 'typeScript', 'redux'],
+  imageSrc: trackar,
+  titre: 'Task Tracker',
+  technolgies: ['React','CSS'],
   id:'thirdProject',
   popupDescription: {
-    imageSrc: pro1,
+    imageSrc: trackar,
       titre: 'Add task',
-      technolgies: ['React', 'Bootstrap', 'typeScript', 'redux'],
-      description: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-      demoLink: 'https://ciraganenicole.github.io/Portfolio/',
-      source: 'https://github.com/ciraganenicole/Portfolio',
+      technolgies: ['React', 'CSS'],
+      description: " The task tracker project help people to list everything that they have to do on a given time by setting a reminder in case they forget about the task. By keeping such a list, a person makes sure that his/her tasks are written down all in one place so he doesn't forget anything important.",
+      demoLink: 'https://tasktrackergh.netlify.app/',
+      source: 'https://github.com/GhislainMitahi/tasktracker/',
   },
 };
-
 const projects = [project1,project2,project3]
-
-// functions
 const handleClick = (key) => {
   setPopup(
     projects.filter((modal)=>modal.id === key ? {...modal}:false)
   )
-// console.log(popup.popupDescription
-  console.log(popup[0].popupDescription.titre)
   setShow(true)
 }
-
 const handleShow = () => {
   setShow(false)
 }
-
-// fondition
-
 if(show){
   document.body.classList.add('overflow-hidden')
 }else{
   document.body.classList.remove('overflow-hidden')
 }
-
   return (
     <>
     {show &&(
@@ -93,8 +75,10 @@ if(show){
 <div className="mainP md:p-6 h-auto md:w-auto border-black" id="project">
             <h1 class="text-center md:text-2xl p-4 mb-8"> My done projects </h1>
       <div className=" md:flex flex-wrap md:justify-center md:gap-x-8 h-auto mb-8">
-      {projects.map((work)=>(
-        <Project id={work.id}
+      {projects.map((work,key)=>(
+          <Project 
+          key={key}
+          id={work.id}
           image={work.imageSrc}
           titre={work.titre}
           tech={work.technolgies}
@@ -106,5 +90,4 @@ if(show){
     </>
   )
 }
-
 export default Projects

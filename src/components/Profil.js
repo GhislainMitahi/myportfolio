@@ -25,8 +25,8 @@ const Profil = (props) => {
 </div>
 <div className="w-2/5 items-center text-lg intro">
 <h1 className="text-red text-2xl titre ">Hello, I'm <span className="underline ">{props.data.firstName} {props.data.lastName}</span></h1>
-  <p className="tracking-wider texts">I'm a full-stack web developer.
-I worked on real-world projects with different teams through pair programming.</p>
+  <p className="tracking-wider texts">I'm an experienced full-stack web developer, in love with pair programming and teamwork. I'm also an  open-source enthusiast with a love for clean code and accessible design. 
+Fluent in multiple languages, frameworks, and technologies, and capable of ramping up quickly and efficiently and mentoring junior developers.</p>
 </div>
  <div class="w-2/5 items-center photo">
   <img src={props.gif} alt="gif"/>
