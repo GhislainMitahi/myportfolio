@@ -20,8 +20,8 @@ const project1 = {
       titre: 'Add taskTo',
       technolgies: ['React','Bootstrap', 'typeScript', 'redux'],
       description: " This project was created with the aim to help people increase their productivity. The todo list app allows you to prioritize the tasks that are more important. It was built by implementing the four basic functions which are Create, Read, Update, and Delete(CRUD).",
-      demoLink: 'https://handletasks.netlify.app/',
-      source: 'https://github.com/GhislainMitahi/to_do_tasks_project',
+      demoLink: 'https://tasklistghis.netlify.app/',
+      source: 'https://github.com/GhislainMitahi/tasksAttr/tree/main',
   },
 };
 const project2 = {
@@ -41,12 +41,12 @@ const project2 = {
 const project3 = {
   imageSrc: trackar,
   titre: 'Task Tracker',
-  technolgies: ['React','CSS'],
+  technolgies: ['React','css','html'],
   id:'thirdProject',
   popupDescription: {
     imageSrc: trackar,
       titre: 'Add task',
-      technolgies: ['React', 'CSS'],
+      technolgies: ['React','CSS','HTML'],
       description: " The task tracker project help people to list everything that they have to do on a given time by setting a reminder in case they forget about the task. By keeping such a list, a person makes sure that his/her tasks are written down all in one place so he doesn't forget anything important.",
       demoLink: 'https://tasktrackergh.netlify.app/',
       source: 'https://github.com/GhislainMitahi/tasktracker/',
