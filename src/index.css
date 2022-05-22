@@ -181,6 +181,7 @@ input[type="submit"] {
     }
     .about .content-about .text-about {
         font-size: 15px;
+        /* text-justify: center; */
         height: 100%;
         display: flex;
         flex-direction: column;
