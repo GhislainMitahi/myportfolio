@@ -7,7 +7,7 @@ import Popop from './Popop'
 const Projects = () => {
 
 
-const [popup,setPopup] = useState([])
+const [popup,setPopup] = useState('')
 const [show, setShow] =  useState(false)
 
 const project1 = {
@@ -53,12 +53,16 @@ const project3 = {
   },
 };
 const projects = [project1,project2,project3]
+
 const handleClick = (key) => {
   setPopup(
     projects.filter((modal)=>modal.id === key ? {...modal}:false)
   )
+ console.log(popup)
+
   setShow(true)
 }
+
 const handleShow = () => {
   setShow(false)
 }
